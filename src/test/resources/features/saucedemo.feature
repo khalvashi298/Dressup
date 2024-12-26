@@ -16,7 +16,7 @@ Feature: SauceDemo website functionality testing with valid and invalid login fl
       | username              | password       | product                   |
       | standard_user         | secret_sauce   | Sauce Labs Backpack       |
       | problem_user          | secret_sauce   | Sauce Labs Bike Light     |
-      | performance_glitch    | secret_sauce   | Sauce Labs Bolt T-Shirt   |
+      | performance_glitch_user    | secret_sauce   | Sauce Labs Bolt T-Shirt   |
 
 
 
