@@ -7,16 +7,19 @@
         <list>
           <option value="maven" />
           <option value="maven" />
+          <option value="maven" />
         </list>
       </option>
       <option name="ignoredPackages">
         <list>
           <option value="org.yaml:snakeyaml:1.23" />
           <option value="com.fasterxml.jackson.core:jackson-databind:2.10.3" />
+          <option value="com.fasterxml.jackson.core:jackson-core:2.10.3" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
+          <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="Not exploitable" />
         </list>
