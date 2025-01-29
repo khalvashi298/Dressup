@@ -1,47 +1,43 @@
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.example</groupId>
-  <artifactId>maven</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+<!--  &lt;!&ndash; ჯგუფის და არტიფაქტის ინფორმაცია &ndash;&gt;-->
+<!--  <groupId>com.example</groupId>-->
+<!--  <artifactId>my-project</artifactId>-->
+<!--  <version>1.0-SNAPSHOT</version>-->
+  <groupId>com.example</groupId> <!-- თქვენს კომპანიის ან ორგანიზაციის დომენი -->
+  <artifactId>selenium-test</artifactId> <!-- პროექტის სახელი -->
+  <version>1.0-SNAPSHOT</version> <!-- პროექტის ვერსია -->
 
-  <name>myproject</name>
-  <url>http://maven.apache.org</url>
 
-  <properties>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
+  <!-- დანამატები (დამოკიდებულებები) -->
   <dependencies>
-    <!-- Selenium -->
-
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>4.27.0</version>
-    </dependency>
-
-    <!-- TestNG -->
+    <!-- TestNG dependence -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>7.10.2</version>
+      <version>7.7.0</version>
       <scope>test</scope>
     </dependency>
 
-    <!-- WebDriverManager -->
+
+
+    <!-- Log4j (optional for logging) -->
     <dependency>
-      <groupId>io.github.bonigarcia</groupId>
-      <artifactId>webdrivermanager</artifactId>
-      <version>5.9.2</version>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.20.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.20.0</version>
     </dependency>
 
-    <!-- RestAssured -->
+    <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
@@ -49,59 +45,54 @@
     </dependency>
 
 
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>gherkin</artifactId>
-      <version>30.0.4</version>
-    </dependency>
-
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-testng</artifactId>
-      <version>7.14.0</version>
-    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
       <version>7.20.1</version>
     </dependency>
 
-    <!--        აქამდე დამატებული-->
-<!--    <dependency>-->
-<!--      <groupId>org.junit.jupiter</groupId>-->
-<!--      <artifactId>junit-jupiter-api</artifactId>-->
-<!--      <version>5.7.0</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.8.1</version>
-      <scope>test</scope>
-    </dependency>
 
-    <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter-engine</artifactId>
-          <version>5.7.0</version>
-          <scope>test</scope>
-        </dependency>
-
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
     <dependency>
       <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-spring</artifactId>
-      <version>7.10.0</version>
+      <artifactId>cucumber-testng</artifactId>
+      <version>7.20.1</version>
+    </dependency>
+
+
+
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.27.0</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.9.2</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
 
   </dependencies>
 
+  <!-- Maven build plugins (optional) -->
   <build>
     <plugins>
+      <!-- Surefire plugin for test execution -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>3.0.0-M5</version>
       </plugin>
     </plugins>
   </build>

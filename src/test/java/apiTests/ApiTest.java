@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static org.hamcrest.Matchers.*;
 
-public class RestAssuredTests {
+public class ApiTest {
 
     @Test
     public void verifyStatusCode() {
