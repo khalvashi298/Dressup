@@ -14,6 +14,7 @@
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
   <dependencies>
     <!-- Cucumber Dependencies -->
     <dependency>
@@ -21,21 +22,25 @@
       <artifactId>cucumber-java</artifactId>
       <version>7.14.0</version>
     </dependency>
+
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-junit</artifactId>
       <version>7.14.0</version>
     </dependency>
+
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-testng</artifactId>
       <version>7.14.0</version>
     </dependency>
+
     <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest</artifactId>
       <version>2.2</version>
     </dependency>
+
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
@@ -63,19 +68,10 @@
       <version>2.28.0</version>
     </dependency>
 
-
-
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.28.0</version>
-    </dependency>
-
-    <!-- JUnit Dependency -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
     </dependency>
 
 
@@ -86,20 +82,32 @@
       <version>5.9.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.20.0</version>
+    </dependency>
 
-      <!-- Log4j Dependency -->
-      <dependency>
-        <groupId>log4j</groupId>
-        <artifactId>log4j</artifactId>
-        <version>1.2.17</version> <!-- ან გამოიყენეთ სხვა ვერსია -->
-      </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.20.0</version>
+    </dependency>
+
+
+    <!--      &lt;!&ndash; Log4j Dependency &ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>log4j</groupId>-->
+<!--        <artifactId>log4j</artifactId>-->
+<!--        <version>1.2.17</version> &lt;!&ndash; ან გამოიყენეთ სხვა ვერსია &ndash;&gt;-->
+<!--      </dependency>-->
+    
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>7.7.0</version>
       <scope>test</scope>
     </dependency>
-
 
   </dependencies>
   <build>
