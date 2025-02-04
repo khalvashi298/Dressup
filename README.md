@@ -15,7 +15,7 @@
 - `steps/` - Step Definition-ები
 - `runner/` - Cucumber Runner კლასები
 - `tests/` - ძირითადი ტესტები
-- `config/` - კონფიგურაცია-?
+
 
 
 ## ინსტალაცია და გაშვება
