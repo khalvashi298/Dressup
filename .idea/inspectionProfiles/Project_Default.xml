@@ -14,6 +14,8 @@
           <option value="maven" />
           <option value="maven" />
           <option value="maven" />
+          <option value="dressup" />
+          <option value="dressup" />
         </list>
       </option>
       <option name="ignoredPackages">
@@ -27,6 +29,8 @@
           <option value="org.apache.commons:commons-compress:1.21" />
           <option value="io.netty:netty-codec-http:4.1.92.Final" />
           <option value="log4j:log4j:1.2.17" />
+          <option value="ch.qos.logback:logback-classic:1.4.14" />
+          <option value="commons-codec:commons-codec:1.11" />
         </list>
       </option>
       <option name="ignoredReasons">
@@ -38,6 +42,8 @@
           <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="In progress" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="Not exploitable" />
         </list>
