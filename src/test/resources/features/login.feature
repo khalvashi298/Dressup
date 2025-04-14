@@ -9,4 +9,4 @@ Feature: Login functionality
     And the user clicks the login button
    Then the user should be successfully logged in
 
-#    When the user clicks at the authentication icon
+

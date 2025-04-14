@@ -1,14 +1,3 @@
-#Feature: Registration form visibility
-#
-#  Background:
-#    Given the browser is open and the  "https://dressup.ge/" website is loaded
-#
-#    Scenario:
-#      And the user closes the pop-up window
-#      When the user clicks on the user icon
-#      And the user closes the pop-up window again
-#      When clicks on the registration button
-
 Feature: Registration form visibility
 
   Background:
