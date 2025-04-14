@@ -11,6 +11,7 @@ public class LoginSteps {
     private static final Logger logger = Logger.getLogger(LoginSteps.class.getName());
 
 
+
     @Given("the browser is open and the {string} website is loaded")
     public void theBrowserIsOpenAndTheWebsiteIsLoaded(String url) {
         logger.info("Opening browser and loading the website: " + url);
@@ -95,3 +96,4 @@ public class LoginSteps {
 }
 
 }
+//მუშაობს
