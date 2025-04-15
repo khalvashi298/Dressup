@@ -1,10 +1,15 @@
-name: Run Tests
+name: Run Tests and Send Report
 
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  schedule:
+    - cron: '40 11 * * *'
+    # ყოველი დღე 10:30 UTC (14:30 საქართველოს დროით)
+#ან schedule:
+#  - cron: '*/5 * * * *'  # ყოველ 5 წუთში
 
 jobs:
   build:
@@ -22,3 +27,16 @@ jobs:
 
       - name: Run tests with Maven
         run: mvn clean test
+
+      - name: Send Test Report via Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: 'smtp.gmail.com'
+          server_port: 587
+          username: ${{ secrets.GMAIL_USERNAME }}  # ეს არის თქვენი Gmail ელ.ფოსტის სახელი, რომელიც Secrets-ში გაქვთ
+          password: ${{ secrets.GMAIL_PASSWORD }}  # ეს არის თქვენი Gmail პაროლი ან App Password, რომელიც Secrets-ში გაქვთ
+          to: 'maiakhalvashi688@gmail.com'  # ჩაწერეთ იმ პირის ელ.ფოსტის მისამართი, ვისაც რეპორტი უნდა გაუგზავნოთ
+#          ან to: 'developer@example.com, yourname@gmail.com'  # ორივეს მიუვა,მაგალითად მე და დეველოპერს
+          subject: 'Test Report'
+          body: 'Test execution completed. Find the report attached.'
+          attachments: './target/surefire-reports/*.xml'
